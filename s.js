@@ -4,7 +4,7 @@ let turn = "Player 1";
 let isGameOver = false;
 
 const imgPlayer1 = '<img src="7.jpg" alt="Player 1" class="game-img">';
-const imgPlayer2 = '<img src="4.jpg" alt="Player 2" class="game-img">';
+const imgPlayer2 = '<img src="4.jpeg" alt="Player 2" class="game-img">';
 
 boxes.forEach(e => {
   e.innerHTML = ""; // Clear the box content
