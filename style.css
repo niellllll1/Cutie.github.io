@@ -1,0 +1,116 @@
+body {
+     font-family: 'Comic Sans MS', cursive, sans-serif;/* Playful font */
+    background-color: #f8e6ff; /* Light Lavender */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.6em;
+    color: #c7478c; /* Dark Pink */
+    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); /* Light Pink shadow */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #e64a7f; /* Hot Pink */
+    text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.5); /* Light Pink shadow */
+    font-style: italic; /* Italic header */
+}
+
+.score {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #e64a7f; /* Hot Pink */
+    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.5); /* Light Pink shadow */
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px; /* Increased gap */
+    justify-content: center;
+}
+
+.card {
+    width: 120px; /* Increased card size */
+    height: 120px;
+    border: 2px solid #e6b8af; /* Light Rose Border */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    margin: 5px; /* Increased margin */
+    perspective: 1000px;
+    cursor: pointer;
+    background-color: #fff0f5; /* Very Light Pink */
+    transition: transform 0.6s ease; /* Smoother transition */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden; /* Prevent image overflow */
+}
+
+.card img {
+    width: 100%; /* Image fills card */
+    height: 100%;
+    object-fit: cover; /* Image covers card without distortion */
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+    animation: flip 0.6s ease-in-out; /* Smoother animation */
+}
+
+.card.matched {
+    pointer-events: none;
+    opacity: 0.7; /* Slightly higher opacity */
+    transform: scale(0.95); /* Slightly less scaling */
+}
+
+@keyframes flip {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(180deg); }
+}
+
+.reset-button {
+  background-color: #e6b8af; /* Light Rose */
+  border: none;
+  color: #c7478c; /* Dark Pink */
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4em;
+  margin: 15px 2px;
+  cursor: pointer;
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.4s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Playful font */
+}
+
+.reset-button:hover {
+  background-color: #e64a7f; /* Hot Pink */
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #FF69B4; 
+    box-shadow: 5px 5px 5px black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #FFB6C1; /* Lighter Pink on hover */
+}
+
+  
