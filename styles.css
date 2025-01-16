@@ -1,0 +1,129 @@
+*.game-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #F8E0E0; /* Light Pink Background */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Softer font */
+    padding-top: 5vh;
+}
+
+.turn-container {
+    width: 170px;
+    height: 80px;
+    margin: 20px auto; /* Added margin for spacing */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #FFD7D7; /* Light Pink Background for container */
+}
+
+.turn-container h3 {
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 1.4rem; /* Slightly smaller font size */
+    color: #800080; /* Purple text color */
+}
+
+.turn-container .turn-box {
+    border: 2px solid #FF69B4; /* Hot Pink border */
+    font-size: 1.4rem; /* Slightly smaller font size */
+    font-weight: 600; /* Slightly less bold */
+    padding: 10px; /* Added padding for better spacing */
+    color: #FF69B4; /* Hot Pink text color */
+}
+
+.turn-container .turn-box:nth-child(even) {
+    border-right: none;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF69B4; /* Hot Pink */
+    z-index: -1;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid #FF69B4; /* Hot Pink border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.box {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #FF69B4; 
+    padding: 0;
+    border-radius: 5px; 
+}
+
+.box:hover {
+    background-color: #FFB6C1; /* Light Pink hover color */
+}
+
+#play-again {
+    background-color: #FF69B4; /* Hot Pink */
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px; /* Added margin for spacing */
+    color: white; /* White text color */
+}
+
+#play-again:hover {
+    padding: 10px 40px;
+    background-color: #FFB6C1; /* Light Pink hover color */
+    color: #FF69B4; /* Hot Pink text color */
+}
+
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #FF69B4;
+    box-shadow: 5px 5px 5px black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background-color: #FFB6C1; /* Lighter Pink on hover */
+}
+
